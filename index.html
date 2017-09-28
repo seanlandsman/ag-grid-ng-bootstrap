@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ag-Grid Angular Third Party Examples</title>
+
+    <!-- polyfills -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+    <!-- ag-grid CSS -->
+    <link href="node_modules/ag-grid/dist/styles/ag-grid.css" rel="stylesheet"/>
+    <link href="node_modules/ag-grid/dist/styles/theme-material.css" rel="stylesheet"/>
+    <link href="node_modules/ag-grid/dist/styles/theme-fresh.css" rel="stylesheet"/>
+
+    <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
+
+    <!-- Configure SystemJS -->
+    <script src="systemjs.config.js"></script>
+    <script>
+        System.import('app').catch(function (err) {
+            console.error(err);
+        });
+    </script>
+
+    <style>
+        /* only necessary as the demo grids are small and the ngx-datepicker is large */
+        ag-grid-angular .ag-menu {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<!-- 3. Display the application -->
+<body>
+<my-app>Loading...</my-app>
+</body>
+
+</html>
